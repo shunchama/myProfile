@@ -1,25 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTMLの練習</title>
+    <title>Shunchama's Retro Web</title>
     <style>
-        h1.header {
+        /* レトロ背景 */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/rocky-wall.png'), linear-gradient(45deg, #ffccff, #99ccff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 90s風 コンテナ */
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background: #FFFFFF;
+            padding: 15px;
+            border: 3px solid #ff66cc;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: linear-gradient(90deg, #ff99cc, #ffccff);
+            padding: 10px;
+            text-align: center;
+            font-size: 26px;
             color: white;
-            background-color: aqua;
-            -webkit-text-stroke: 1px black;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* サイドバー（目次） */
+        .sidebar {
+            width: 200px;
+            float: left;
+            background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), #ffccff;
+            padding: 15px;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            color: #ff33aa;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ff33aa;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            background: #ffffff;
+            border: 2px solid #ff99cc;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ff99cc;
+            color: white;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            width: 660px;
+            float: right;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff66cc;
+        }
+
+        /* メッセージボックス */
+        .message-box {
+            border: 3px dotted #ff99cc;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: #fff5f5;
+        }
+
+        .message-box img {
+            width: 40px;
+            vertical-align: middle;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid white;
+        }
+
+        .message-box p {
             display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        /* フッター */
+        .footer {
+            clear: both;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff99cc;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* 90sの点滅効果 */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* マルチカラー テキスト */
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <h1 class="header">
-        しゅんチャマのwebサイト
-    </h1>
-    <a href="https://x.com/shunchama393">Twitter: @shunchama393</a>
+
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                🎉 ようこそ！しゅんチャマのレトロWebへ 🎉
+            </marquee>
+        </div>
+
+        <!-- 左側のプロフィール -->
+        <div class="sidebar">
+            <img src="https://via.placeholder.com/200x200" alt="User Icon">
+            <h2 class="rainbow-text">しゅんチャマ</h2>
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">📜 Browse</a></li>
+                <li><a href="#">💌 Messages</a></li>
+                <li><a href="#">💖 Friends</a></li>
+            </ul>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <h2 class="blink">🌟 About Me 🌟</h2>
+            <p>Welcome to my 2000s retro website! I'm Shunchama, a web enthusiast.</p>
+
+            <!-- メッセージボックス -->
+            <div class="message-box">
+                <img src="https://via.placeholder.com/40" alt="Chat Avatar">
+                <p>Hi there! Do you think I could have your credit card information, please?</p>
+            </div>
+
+            <div class="message-box">
+                <img src="https://via.placeholder.com/40" alt="Chat Avatar">
+                <p>Sorry, no thanks.</p>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="footer">
+            © 2025 Shunchama Web | すべての権利を保有しています。
+        </div>
+    </div>
+
 </body>
 
 </html>
