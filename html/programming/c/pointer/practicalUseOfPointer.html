@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shunchama's website</title>
+    <style>
+        /* レトロ背景 */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/rocky-wall.png'), linear-gradient(45deg, #ffccff, #99ccff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 90s風 コンテナ */
+        .container {
+            width: 950px;
+            margin: 20px auto;
+            background: #FFFFFF;
+            padding: 15px;
+            border: 3px solid #ff66cc;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: linear-gradient(90deg, #ff99cc, #ffccff);
+            padding: 10px;
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* サイドバー（目次） */
+        .sidebar {
+            width: 200px;
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), #ffccff;
+            padding: 15px;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            display: fle;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            color: #ff33aa;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ff33aa;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            background: #ffffff;
+            border: 2px solid #ff99cc;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ff99cc;
+            color: white;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 660px;
+            float: right;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff66cc;
+        }
+
+        /* メッセージボックス */
+        .message-box {
+            border: 3px dotted #ff99cc;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: #fff5f5;
+        }
+
+        .message-box img {
+            width: 30px;
+            vertical-align: middle;
+            border-radius: 0%;
+            margin-right: 10px;
+        }
+
+        .message-box p {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        /* フッター */
+        .footer {
+            clear: both;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff99cc;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* 90sの点滅効果 */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* マルチカラー テキスト */
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        pre {
+            background-color: #333;
+            color: white;
+        }
+
+        h3 {
+            margin-top: -10px;
+            margin-bottom: -5px;
+        }
+        h4{
+            margin-top: -5px;
+            margin-bottom: -5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            🌸Welcome To SHUNCHAMA's Website!!🌸
+        </div>
+
+        <!-- 左側のプロフィール -->
+        <div class="sidebar">
+            <img src="../../../../imgs/myIcon.jpg" alt="User Icon">
+            <h2 class="rainbow-text">しゅんチャマ</h2>
+            <ul>
+                <li><a href="../../../index.html">🏠 Home</a></li>
+                <li><a href="../../home_programming.html">💻 Programming</a></li>
+                <li><a href="../../../investing/home_investing.html">📈 Investing</a></li>
+                <li><a href="">📒 Blog</a></li>
+                <li><a href="https://twitter.com/shunchama393">💌 ContactMe</a></li>
+            </ul>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <h2>🌟 C 🌟</h2>
+            <h3>Practical Uses of Pointers in C</h3>
+            <p>Pointers are a powerful feature in C that allow efficient memory management, data manipulation, and flexible program structures.Below are some practical use cases of pointers</p>
+            <!-- メッセージボックス -->
+            <div class="message-box">
+                <p>
+                <h3>1.Dynamic Memory Allocation</h3>
+                Pointers are used with <strong>malloc()</strong> and <strong>free()</strong> to allocate and release memory dynamically.
+                <h4>Example: Allocating memory for an array</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+    #include&lt;stdlib.h&gt;
+    
+    int main(){
+        int *arr;
+        int n=5;
+
+        //Allocating memory for an array of 5 integers
+        arr=(int*)malloc(n*sizeof(int));
+
+        //Storing values
+        for(int i=0;i<p><</p>n;i++){
+            arr[i]=i+1;
+        }
+
+        //Printing values
+        for(int i=0;i<p><</p>n;i++){
+            printf("%d",arr[i]);
+        }
+
+        //Freeing memory
+        free(arr);
+
+        return 0;
+    }
+                </code></pre>
+                <h3>2.Implementing Linked Lists</h3>
+                Linked lists rely on pointers to create dynamic data structures where each node contains a pointer to the next node.
+                <h4>Example: Singly Linked List</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+    #include&lt;stdlib.h&gt;
+
+    //Define a node
+    struct Node{
+        int data;
+        struct Node* next;
+    };
+
+    //Function to create new node
+    struct Node* createNode(int value){
+        struct Node* newNode=(struct Node*)malloc(sizeof(struct Node));
+        newNode->data=value;
+        newNode->next=NULL;
+        return newNode;
+    }
+
+    int main(){
+        struct Node* head=createNode(10);
+        head->next=createNode(20);
+        head->next->next=createNode(30);
+
+        //Print list
+        struct Node* temp=head;
+        while(temp!=NULL){
+            printf("%d -> ", temp->data);
+            temp=temp->next;
+        }
+        printf("NULL\n");
+
+        return 0;
+    }
+                </code></pre>
+                <pre><code>
+    10 -> 20 -> 30 -> NULL
+                </code></pre>
+                <h3>3.Pointers to Functions(Function Pointers)</h3>
+                Function pointers allow functions to be passed as arguments and selected dynamically at runtime.
+                <h4>Example: Function Pointer Usage</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+    
+    //Function prototypes
+    void greetEnglish(){
+        printf("Nyahello~\n");
+    }
+    void greetJapanese(){
+        printf("にゃっはろ～\n");
+    }
+
+    int main(){
+        void (*greet)(); //Declare a function pointer
+        greet=greetEnglish;
+        greet(); //Output: Nyahello~
+        greet=greetJapanese;
+        greet(); //Output: にゃっはろ～
+
+        return 0;
+    }
+                </code></pre>
+                <h3>4.Pointer-Based String Manipulation</h3>
+                Pointers make string handling more efficient.
+                <h4>Example: String Copy Using Pointers</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+
+    void copyString(char *source, char *destination){
+        while(*source){
+            *destination=*source;
+            source++;
+            destination++;
+        }
+        *destination="\0"; //Null-terminate the string
+    }
+
+    int main(){
+        char source[]="Nyahello~";
+        char destination[50];
+
+        copyString(source,destination);
+        printf("Copied String: %s\n",destination);
+
+        return 0;
+    }
+                </code></pre>
+                <h3>5.Array Manipulation with Pointers</h3>
+                Pointers allow efficient traversal and modification of arrays.
+                <h4>Example: Using Pointers to Iterate Over an Array</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+
+    int main(){
+        int arr[]={10,20,30,40,50};
+        int *ptr=arr;
+
+        for(int i=0;i&lt;5;i++){
+            printf("Element %d: &d\n",i,*(ptr+i));
+        }
+
+        return 0;
+    }
+                </code></pre>
+                <h3>6.Passing Pointers to Functions(Call by Reference)</h3>
+                Pointers allow modifying function parameters directly.
+                <h4>Example: Swapping Two Numbers Using Pointers</h4>
+                <pre><code>
+    #include&lt;stdio.h&gt;
+
+    void swap(int *a,int *b){
+        int temp=*a;
+        *a=*b;
+        *b=temp;
+    }
+
+    int main(){
+        int x=5,y=10;
+        swap(&x,&y);
+        printf("After Swap: x = %d, y = %d\n",x,y); //Output: x = 10, y = 5
+        
+        return 0;
+    }
+                </code></pre>
+                <h4>Case in Java(↓)</h4>
+                <pre><code>
+    public class SwapExample{
+        public static void swap(int[] a,int[] b){
+            int temp=a[0];
+            a[0]=b[0];
+            b[0]=temp;
+        }
+
+        public static void main(String[] args){
+            int[] x={5};
+            int[] y={10};
+
+            System.out.println("After Swap: x = " + x[0] + ", y = " + y[0]);
+        }
+    }
+                </code></pre>
+                </p>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="footer">
+            © 2025 shunchama's Website | All rights reserved.
+        </div>
+    </div>
+
+</body>
+
+</html>
