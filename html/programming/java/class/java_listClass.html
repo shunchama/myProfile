@@ -183,12 +183,12 @@
 
         <!-- 左側のプロフィール -->
         <div class="sidebar">
-            <img src="../../../imgs/myIcon.jpg" alt="User Icon">
-            <h2 class="rainbow-text">しゅんチャマ</h2>
+            <img src="../../../../imgs/myIcon.jpg" alt="User Icon">
+            <h2 class="rainbow-text"></h2>
             <ul>
-                <li><a href="../../../index.html">🏠 Home</a></li>
+                <li><a href="../../../../index.html">🏠 Home</a></li>
                 <li><a href="../home_programming.html">💻 Programming</a></li>
-                <li><a href="../../investing/home_investing.html">📈 Investing</a></li>
+                <li><a href="../../../investing/home_investing.html">📈 Investing</a></li>
                 <li><a href="">📒 Blog</a></li>
                 <li><a href="https://twitter.com/shunchama393">💌 ContactMe</a></li>
             </ul>
@@ -207,7 +207,7 @@ import java.util.ArrayList;
 
 class ListTest {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        List&lt;String&gt; list = new ArrayList<>();
 
         // add()
         list.add("おはようございます");
@@ -227,7 +227,7 @@ class ListTest {
         System.out.println("\n" + list.indexOf("こんにちは"));
 
         // subList()
-        List<String> list03 = list.subList(0, 2);
+        List&lt;String&gt; list03 = list.subList(0, 2);
         System.out.println("\n" + list03);
 
         // contains()
@@ -246,7 +246,7 @@ class ListTest {
         System.out.println(list);
 
         // addAll()
-        List<String> list02 = new ArrayList<>();
+        List&lt;String&gt; list02 = new ArrayList<>();
         list02.add("Hello");
         list02.add("Hi");
         list.addAll(list02);
@@ -259,6 +259,7 @@ class ListTest {
     }
 }
                 </code></pre>
+                Uploaded Date-2025-02-01
             </div>
         </div>
 
