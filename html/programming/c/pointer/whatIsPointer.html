@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shunchama's website</title>
+    <style>
+        /* レトロ背景 */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/rocky-wall.png'), linear-gradient(45deg, #ffccff, #99ccff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 90s風 コンテナ */
+        .container {
+            width: 950px;
+            margin: 20px auto;
+            background: #FFFFFF;
+            padding: 15px;
+            border: 3px solid #ff66cc;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: linear-gradient(90deg, #ff99cc, #ffccff);
+            padding: 10px;
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* サイドバー（目次） */
+        .sidebar {
+            width: 200px;
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), #ffccff;
+            padding: 15px;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            display: fle;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            color: #ff33aa;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ff33aa;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            background: #ffffff;
+            border: 2px solid #ff99cc;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ff99cc;
+            color: white;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 660px;
+            float: right;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff66cc;
+        }
+
+        /* メッセージボックス */
+        .message-box {
+            border: 3px dotted #ff99cc;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: #fff5f5;
+        }
+
+        .message-box img {
+            width: 30px;
+            vertical-align: middle;
+            border-radius: 0%;
+            margin-right: 10px;
+        }
+
+        .message-box p {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        /* フッター */
+        .footer {
+            clear: both;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff99cc;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #ff33aa;
+        }
+
+        /* 90sの点滅効果 */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* マルチカラー テキスト */
+        .rainbow-text {
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        pre {
+            background-color: #333;
+            color: white;
+        }
+
+        h3 {
+            margin-top: -10px;
+            margin-bottom: -7px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            🌸Welcome To SHUNCHAMA's Website!!🌸
+        </div>
+
+        <!-- 左側のプロフィール -->
+        <div class="sidebar">
+            <img src="../../../../imgs/myIcon.jpg" alt="User Icon">
+            <h2 class="rainbow-text">しゅんチャマ</h2>
+            <ul>
+                <li><a href="../../../index.html">🏠 Home</a></li>
+                <li><a href="../home_programming.html">💻 Programming</a></li>
+                <li><a href="../../investing/home_investing.html">📈 Investing</a></li>
+                <li><a href="">📒 Blog</a></li>
+                <li><a href="https://twitter.com/shunchama393">💌 ContactMe</a></li>
+            </ul>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <h2>🌟 C 🌟</h2>
+            <h3>What is pointer in C language?</h3>
+
+            <!-- メッセージボックス -->
+            <div class="message-box">
+                <p>
+                <h3>1.Declaring a Pointer</h3>
+                A pointer in C is a variable that stores the <strong>memory address</strong> of another variable.
+                Instead of holding a direct value, a pointer holds the location of a value in memory. <br>
+                To declare a pointer, use the *(asterisk) symbol.
+                <pre><code>
+    int *i;
+    char *c;
+    float *f;
+                    </code></pre>
+                <h3>2.Assigning an Address to a Pointer</h3>
+                Use the <strong>address-of operator(&)</strong> to assign the address of a variable to pointer.
+                <pre><code>
+    #include<stdio.h>
+    
+    int main(){
+        int num=10;
+        int *ptr;
+
+        ptr=&num;
+        
+        printf("Value of num: %d\n",num);
+        printf("Address of num: %p\n",&num);
+        printf("Pointer stores address: %p\n",ptr);
+        printf("Value at pointer: %d\n",*ptr);
+
+        return 0;
+    }
+                </code></pre>
+                <pre><code>
+    Value of num: 10
+    Address of num: 0000007a545ff974
+    Pointer stores address: 0000007a545ff974
+    Value at pointer: 10
+                </code></pre>
+                <h3>3.Dereferencing a Pointer</h3>
+                The *(dereferencing operator) is used to access the value stored at the address a pointer holds.
+                <pre><code>
+    int a=20;
+    int *p=&a;
+
+    printf("%d",*p); //Output: 20
+                </code></pre>
+                <h3>4.Pointer Arithmetic</h3>
+                You can perform arithmetic operations on pointers.
+                <pre><code>
+    int arr[]=10,20,30;
+    int *ptr=arr;
+
+    printf("%d\n",*ptr); //10
+    ptr++; //Move to next element
+    printf("%d\n",*ptr); //20
+    ptr++; //Move to next element
+    printf("%d\n",*ptr); //30
+                </code></pre>
+                <h3>5.Null Pointer</h3>
+                A pointer that does not point to any valid memory location is called a null pointer.
+                <pre><code>
+    int *ptr=NULL;
+                </code></pre>
+                <h3>6.Pointer to Pointer</h3>
+                A pointer to pointer stores the address of another pointer.
+                <pre><code>
+    int a=5;
+    int *p=&a;
+    int **pp=&p; //Pointer to pointer
+
+    printf("%d\n",**pp); //Output: 5
+                </code></pre>
+                <h3>7.Dynamic Memory Allocation(malloc,free)</h3>
+                Pointers are essential in dynamic memory allocation.
+                <pre><code>
+    int *ptr=(int*)malloc(sizeof(int)); //Allocates memory
+    *ptr=42;
+    printf("%d",*ptr); //Output: 42
+    free(ptr); //Free allocated memory
+                </code></pre>
+                <h3>8.Function Pointers</h3>
+                A pointer can also point to a function.
+                <pre><code>
+    #include<stdio.h>
+    
+    void hello(){
+        printf("Nyahello~\n");
+    }
+
+    int main(void){
+        void (*funcPtr)(); //Declare function pointer
+        funcPtr=hello; //Assign function address
+        funcPtr(); //Call function using pointer
+
+        return 0;
+    }
+                </code></pre>
+                </p>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="footer">
+            © 2025 shunchama's Website | All rights reserved.
+        </div>
+    </div>
+
+</body>
+
+</html>
