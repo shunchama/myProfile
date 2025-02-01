@@ -170,17 +170,6 @@
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
-
-        .title {
-            color: black;
-            margin-top: -5px;
-            background-color: white;
-            display: inline-block;
-        }
-
-        .main-content h3 {
-            margin-top: -10px;
-        }
     </style>
 </head>
 
@@ -194,12 +183,12 @@
 
         <!-- 左側のプロフィール -->
         <div class="sidebar">
-            <img src="../../imgs/myIcon.jpg" alt="User Icon">
+            <img src="../../../imgs/myIcon.jpg" alt="User Icon">
             <h2 class="rainbow-text">しゅんチャマ</h2>
             <ul>
-                <li><a href="../../index.html">🏠 Home</a></li>
-                <li><a href="../programming/home_programming.html">💻 Programming</a></li>
-                <li><a href="../investing/home_investing.html">📈 Investing</a></li>
+                <li><a href="../../../index.html">🏠 Home</a></li>
+                <li><a href="../home_programming.html">💻 Programming</a></li>
+                <li><a href="../../../investing/home_investing.html">📈 Investing</a></li>
                 <li><a href="">📒 Blog</a></li>
                 <li><a href="https://twitter.com/shunchama393">💌 ContactMe</a></li>
             </ul>
@@ -207,60 +196,69 @@
 
         <!-- メインコンテンツ -->
         <div class="main-content">
-            <h2>🌟 Programming 🌟</h2>
-            <p>Page about Programming</p>
+            <h2>🌟 Java 🌟</h2>
+            <h3>List,ArrayList</h3>
 
             <!-- メッセージボックス -->
             <div class="message-box">
-                <h2 class="title">
-                    Java
-                </h2>
-                <h3>
-                    class
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./java/class/java_listClass.html">List</a>
-                    </li>
-                    <li>
-                        <a href="../../html/programming/home_programming.html">No content</a>
-                    </li>
-                    <li>
-                        <a href="../investing/home_investing.html">No content</a>
-                    </li>
-                    <li>
-                        <a href="">No content</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/shunchama393">No content</a>
-                    </li>
-                </ul>
-            </div>
+                <pre><code>
+import java.util.List;
+import java.util.ArrayList;
 
-            <div class="message-box">
-                <h2 class="title">
-                    C
-                </h2>
-                <h3>
-                    Pointer
-                </h3>
-                <ul>
-                    <li>
-                        <a href="./c/pointer/whatIsPointer.html">what is pointer?</a>
-                    </li>
-                    <li>
-                        <a href="./c/pointer/practicalUseOfPointer.html">practical use of pointer</a>
-                    </li>
-                    <li>
-                        <a href="../investing/home_investing.html">No content</a>
-                    </li>
-                    <li>
-                        <a href="">No content</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/shunchama393">No content</a>
-                    </li>
-                </ul>
+class ListTest {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList<>();
+
+        // add()
+        list.add("おはようございます");
+        list.add("こんにちは");
+        list.add("こんばんは");
+
+        // get()
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+        // set()
+        list.set(0, "にゃっはろ～");
+        System.out.println("\n" + list.get(0));
+
+        // indexOf()
+        System.out.println("\n" + list.indexOf("こんにちは"));
+
+        // subList()
+        List&lt;String&gt; list03 = list.subList(0, 2);
+        System.out.println("\n" + list03);
+
+        // contains()
+        System.out.println("\n" + list.contains("にゃっはろ～"));
+
+        // remove()
+        list.remove(1);// remove"こんにちは"
+        System.out.println("\n" + list);
+
+        // distinct()
+        System.out.println("\n" + list);
+        list.add("こんにちは");
+        list.add("にゃっはろ～");
+        System.out.println(list);
+        list.stream().distinct();
+        System.out.println(list);
+
+        // addAll()
+        List&lt;String&gt; list02 = new ArrayList<>();
+        list02.add("Hello");
+        list02.add("Hi");
+        list.addAll(list02);
+        System.out.println("\n" + list);
+
+        // clear()
+        list.clear();
+        System.out.println("\n" + list);
+
+    }
+}
+                </code></pre>
             </div>
         </div>
 
